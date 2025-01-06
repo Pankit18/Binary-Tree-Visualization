@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Binary Tree Visualizer</title>
+</head>
+<body>
+    <div class="hero">
+        <div class="content">
+            <h1>🌳 Binary Tree Visualizer</h1>
+            <p>Visualize your binary trees with stunning designs and interactive layouts.</p>
+            <form action="/result" method="post">
+                <label for="tree-values">Enter Node Values (comma-separated):</label>
+                <input type="text" id="tree-values" name="tree_values" placeholder="e.g., 10,5,15,3,7,12,18" required>
+                <button type="submit">Visualize</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

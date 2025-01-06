@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Binary Tree Visualization</title>
+</head>
+<body>
+    <div class="hero small">
+        <div class="content">
+            <h1>🌲 Binary Tree Visualization</h1>
+            <p>Here’s your beautiful binary tree!</p>
+            <div id="tree-container"></div>
+            <a href="/" class="btn">🏠 Go Back</a>
+        </div>
+    </div>
+    <script>
+        const treeData = {{ tree_data | tojson | safe }};
+    </script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="{{ url_for('static', filename='tree.js') }}"></script>
+</body>
+</html>
